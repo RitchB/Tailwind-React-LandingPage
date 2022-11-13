@@ -51,6 +51,9 @@ module.exports = {
         cardsboxred: '#C22C39',
         cardsboxblue: '#1f396E',
         youtube: '#FF0000',
+        solanagreen: '#00FFA3',
+        solanablue: '#03E1FF',
+        solanapurple: '#DC1FFF',
       },
       fontFamily: {
         balsamiq: "'Balsamiq Sans', cursive",
@@ -69,3 +72,4 @@ module.exports = {
   },
   plugins: [],
 };
+

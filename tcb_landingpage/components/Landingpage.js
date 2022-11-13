@@ -10,7 +10,7 @@ const Landingpage = () => {
   return (
     <div className="relative overflow-hidden">
       <Popover as="header" className="relative">
-        <div className="bg-gray-900 pt-6">
+        <div className="bg-white pt-6">
           <nav
             className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
             aria-label="Global"
@@ -20,17 +20,10 @@ const Landingpage = () => {
                 <Image
                   src={theCardsBoxLogo}
                   alt=""
-                  width={100}
                   height={100}
+                  width={300}
                   className="mt-8"
                 />
-
-                <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
-                    <span className="sr-only">Open main menu</span>
-                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
@@ -54,12 +47,12 @@ const Landingpage = () => {
       </Popover>
 
       <main>
-        <div className="bg-gray-900 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
+        <div className="bg-white pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
                 <div className="lg:py-24">
-                  <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-5xl">
+                  <h1 className="mt-4 text-4xl font-bold tracking-tight text-black sm:mt-5 sm:text-6xl lg:mt-6 xl:text-5xl">
                     <span className="block">Trade your cards on Solana</span>
                     <span className="block text-indigo-400">
                       and save tons of money
@@ -72,33 +65,45 @@ const Landingpage = () => {
                     around the world.
                   </p>
                   <div className="mt-10 sm:mt-12">
-                    <form action="#" className="sm:mx-auto sm:max-w-xl lg:mx-0">
+                    <form
+                      action="https://www.getrevue.co/profile/thecardsbox/add_subscriber"
+                      method="post"
+                      id="revue-form"
+                      name="revue-form"
+                      target="_blank"
+                      className="sm:mx-auto sm:max-w-xl lg:mx-0"
+                    >
                       <div className="sm:flex">
                         <div className="min-w-0 flex-1">
-                          <label htmlFor="email" className="sr-only">
-                            Email address
-                          </label>
                           <input
-                            id="email"
-                            type="email"
                             placeholder="Enter your email"
+                            type="email"
+                            name="member[email]"
                             className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
                           />
                         </div>
                         <div className="mt-3 sm:mt-0 sm:ml-3">
                           <button
                             type="submit"
-                            className="block w-full rounded-md bg-indigo-500 py-3 px-4 font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
+                            value="Join now !"
+                            name="member[subscribe]"
+                            className="block w-full rounded-md bg-indigo-500 py-3 px-4 font-medium text-black shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
                           >
                             Join waitlist
                           </button>
                         </div>
                       </div>
                       <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                        Join the waitlist and be notify when theCardsBox launch.
-                        By providing your email, you agree to our{" "}
-                        <a href="#" className="font-medium text-white">
-                          terms of service
+                        By subscribing, you agree with Revue’s{" "}
+                        <a target="_blank" href="https://www.getrevue.co/terms">
+                          Terms of Service
+                        </a>{" "}
+                        and{" "}
+                        <a
+                          target="_blank"
+                          href="https://www.getrevue.co/privacy"
+                        >
+                          Privacy Policy
                         </a>
                         .
                       </p>
