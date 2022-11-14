@@ -4,47 +4,16 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { BsTwitter } from "react-icons/bs";
-import theCardsBoxLogo from "../public/theCardsBox.jpg";
+import Navbar from "./navbar";
+import LandingpageImage from '../public/avatarArthurSoir.jpg'
+import SolanaLogo from '../public/SolanaLogo.png'
 
 const Landingpage = () => {
   return (
     <div className="relative overflow-hidden">
-      <Popover as="header" className="relative">
-        <div className="bg-white pt-6">
-          <nav
-            className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
-            aria-label="Global"
-          >
-            <div className="flex flex-1 items-center">
-              <div className="flex w-full items-center justify-between md:w-auto">
-                <Image
-                  src={theCardsBoxLogo}
-                  alt=""
-                  height={100}
-                  width={300}
-                  className="mt-8"
-                />
-              </div>
-            </div>
-            <div className="hidden md:flex md:items-center md:space-x-6">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://twitter.com/IAmRitchB"
-                className="text-twitter text-3xl"
-              >
-                <BsTwitter />
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
-              >
-                Join waitlist
-              </a>
-            </div>
-          </nav>
-        </div>
-      </Popover>
+      <div>
+        <Navbar />
+      </div>
 
       <main>
         <div className="bg-white pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
@@ -108,15 +77,19 @@ const Landingpage = () => {
                         .
                       </p>
                     </form>
+                    <div className="flex mt-6">
+                        <span>Built on</span>
+                        <Image src={SolanaLogo} alt="" height={100} width={200}/>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-                  <img
+                  <Image
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
+                    src={LandingpageImage}
                     alt=""
                   />
                 </div>
